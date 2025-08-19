@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us — Day in Space</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./styles.css" rel="stylesheet">
+    <style>
+        /* a light wrapper so this page stands alone nicely */
+        .about-page {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 14px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            padding: 16px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: #e7ecff;
+            text-decoration: underline dotted;
+            text-underline-offset: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about-page">
+        <a class="back-link" href="./index.html">← Back to App</a>
+        <div class="about-card">
+            <h1 style="margin-top:0">About Us</h1>
+            <p>
+                This is the mini project created by our team of college — hope you guys like it.
+            </p>
+            <p>
+                Day in Space is a simple web app that lets anyone pick a past date and view what NASA
+                captured that day. It pulls from NASA’s public datasets like Astronomy Picture of the Day (APOD),
+                Earth Polychromatic Imaging Camera (EPIC), and Near-Earth Object (NEO) feeds.
+            </p>
+            <p>
+                We kept the code straightforward and readable, without complicated patterns, so it’s easy to
+                understand and extend. Feel free to improve the UI text, add more endpoints (like Mars Rover Photos),
+                or adjust the layout.
+            </p>
+            <h3>Notes</h3>
+            <ul>
+                <li>The app only displays images and details when NASA’s APIs provide them.</li>
+                <li>Some dates have limited content (for example, EPIC images aren’t available for every day).</li>
+                <li>Data and imagery credits: NASA and respective missions.</li>
+            </ul>
+            <p style="opacity:0.9">
+                Built with plain HTML, CSS, and JavaScript.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NASA Day in Space</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <h1>Day in Space</h1>
+    </div>
+    <div class="actions">
+      <button id="aboutBtn" class="icon-btn" title="About">About</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- Sidebar Controls -->
+    <aside class="card">
+      <div class="card-head">
+        <h2 style="margin:0 0 6px 0;">Pick a Date</h2>
+        <div class="hint">Explore NASA imagery and events captured on a past day.</div>
+      </div>
+      <div class="card-body">
+        <div class="fieldset">
+          <div class="row">
+            <div class="grow">
+              <label for="date">Date</label>
+              <input id="date" type="date" max="">
+            </div>
+          </div>
+
+          <div class="row">
+            <button id="todayBtn" class="btn ghost">Jump to Today (APOD)</button>
+            <button id="fetchBtn" class="btn">Fetch</button>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi">
+              <div class="n" id="kpiTotal">0</div>
+              <div class="t">Total items</div>
+            </div>
+            <div class="kpi">
+              <div class="n" id="kpiPhotos">0</div>
+              <div class="t">Photos</div>
+            </div>
+            <div class="kpi">
+              <div class="n" id="kpiEvents">0</div>
+              <div class="t">Events</div>
+            </div>
+          </div>
+
+          <div class="note">This app uses NASA APOD, EPIC, and NEO feeds. Some dates may have limited content.</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Results -->
+    <main class="card">
+      <div class="card-head">
+        <h2 style="margin:0 0 6px 0;">Results</h2>
+        <div class="hint" id="status">Awaiting a date…</div>
+      </div>
+      <div class="card-body">
+        <div id="results" class="grid"></div>
+        <div id="empty" class="empty" style="display:none">No items found for this date. Try another day.</div>
+      </div>
+    </main>
+  </div>
+
+  <!-- About Panel -->
+  <div id="aboutPanel" class="about" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <h3 id="aboutTitle">About Day in Space</h3>
+    <p>Type a past date to see what NASA captured that day. You’ll get the Astronomy Picture of the Day, EPIC images of Earth (if available), and Near-Earth Object info.</p>
+    <p class="tiny">Data: NASA Open APIs (APOD, EPIC, NEO). For production, consider proxying the API through a backend to keep keys private.</p>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
